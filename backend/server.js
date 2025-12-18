@@ -158,7 +158,7 @@ app.get("/api/health", (req, res) => {
   res.json({ status: "Backend läuft 🚀" });
 });
 
-// ✅ EINE Route: Suche nach PLZ ODER Stadt (oder beidem)
+// EINE Route: Suche nach PLZ ODER Stadt (oder beidem)
 app.get("/api/anlaufstellen", (req, res) => {
   const plz = String(req.query.plz || "").trim();
   const stadt = String(req.query.stadt || "").trim();
