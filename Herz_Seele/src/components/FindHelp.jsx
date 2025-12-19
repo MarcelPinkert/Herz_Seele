@@ -7,6 +7,10 @@ export default function FindHelp() {
   const [status, setStatus] = useState("idle"); // idle | loading | done | error
   const [error, setError] = useState("");
 
+  // 🔹 Backend-URL konfigurierbar (Docker / Azure)
+  const API_BASE =
+    import.meta.env.VITE_API_BASE_URL || "http://localhost:3000";
+
   async function search() {
     setStatus("loading");
     setError("");
@@ -15,7 +19,7 @@ export default function FindHelp() {
     if (plz.trim()) params.set("plz", plz.trim());
     if (stadt.trim()) params.set("stadt", stadt.trim());
 
-    // Optional: Wenn beides leer ist, direkt abbrechen (besseres UX)
+    // UX: leere Suche verhindern
     if (!plz.trim() && !stadt.trim()) {
       setStatus("error");
       setError("Bitte PLZ oder Stadt eingeben.");
@@ -24,7 +28,7 @@ export default function FindHelp() {
 
     try {
       const res = await fetch(
-        `http://localhost:3000/api/anlaufstellen?${params.toString()}`
+        `${API_BASE}/api/anlaufstellen?${params.toString()}`
       );
       const data = await res.json();
 
@@ -40,11 +44,11 @@ export default function FindHelp() {
     } catch (e) {
       setResults([]);
       setStatus("error");
-      setError("Backend nicht erreichbar (läuft server.js?)");
+      setError("Backend nicht erreichbar (läuft der Server?)");
     }
   }
 
-  // Enter soll die Suche auslösen
+  // Enter-Taste startet Suche
   function handleKeyDown(e) {
     if (e.key === "Enter") search();
   }
@@ -96,7 +100,7 @@ export default function FindHelp() {
       )}
 
       {results.length > 0 && (
-        <div style={{ marginTop: "16px" }} className="cards-3">
+        <div className="cards-3" style={{ marginTop: "16px" }}>
           {results.map((r, i) => (
             <article key={`${r.plz}-${r.name}-${i}`} className="card feature">
               <h3 style={{ marginTop: 0 }}>{r.name}</h3>
@@ -104,14 +108,12 @@ export default function FindHelp() {
                 <strong>{r.stadt}</strong> • {r.plz}
               </p>
               <p className="small">{r.strasse}</p>
-              <p className="small">
-                <a
-                  className="btn btn-outline"
-                  href={`tel:${String(r.telefon).replace(/\s+/g, "")}`}
-                >
-                  {r.telefon}
-                </a>
-              </p>
+              <a
+                className="btn btn-outline"
+                href={`tel:${String(r.telefon).replace(/\s+/g, "")}`}
+              >
+                {r.telefon}
+              </a>
             </article>
           ))}
         </div>
