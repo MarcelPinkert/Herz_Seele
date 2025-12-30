@@ -41,7 +41,6 @@ export default function WhatIs() {
             alt="HelloBetter Logo"
             style={{ height: "18px" }}
           />
-          <span>HelloBetter</span>
         </a>
 
         <p className="small" style={{ marginTop: "12px", opacity: 0.9 }}>

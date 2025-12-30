@@ -10,7 +10,7 @@
     "ttsStop": "Vorlesen stoppen",
     "ttsHint": "Hinweis: Vorlesen funktioniert im Browser (z. B. Chrome/Edge) ohne Installation."
   },
-  
+
   "signs": {
     "title": "Häufige Anzeichen",
     "moodTitle": "Stimmung",
@@ -132,15 +132,14 @@
   "resources": {
     "title": "Seriöse Kontakte",
     "note": "Hinweis: Die folgenden Angebote sind deutsche Anlaufstellen, daher sind Namen und Inhalte in deutscher Sprache.",
-    "open": "Website öffnen ↗",
-    "desc": {
-      "ddh": "Wissen, Angebote, Telefonseelsorge-Hinweise.",
-      "ts": "Rund um die Uhr, anonym und kostenlos: 0800 111 0 111 / 0800 111 0 222",
-      "kvs": "Terminservicestellen & ärztlicher Bereitschaftsdienst.",
-      "liga": "Schnelle Hilfe bei Depressionen und in Krisenmomenten",
-      "familie": "Krisentelefone & Anlaufstellen in schwierigen Situationen",
-      "kummer": "Hilfe für Kinder, Jugendliche und Angehörige"
-    }
+    "openWebsite": "Website öffnen ↗",
+
+    "desc_depressionshilfe": "Wissen, Angebote, Telefonseelsorge-Hinweise.",
+    "desc_telefonseelsorge": "Rund um die Uhr, anonym und kostenlos: 0800 111 0 111 / 0800 111 0 222",
+    "desc_116117": "Terminservicestellen & ärztlicher Bereitschaftsdienst.",
+    "desc_depressionsliga": "Schnelle Hilfe bei Depressionen und in Krisenmomenten.",
+    "desc_familienportal": "Krisentelefone & Anlaufstellen in schwierigen Situationen.",
+    "desc_nummergegenkummer": "Hilfe für Kinder, Jugendliche und Angehörige."
   },
 
   "lang": {

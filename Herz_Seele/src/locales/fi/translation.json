@@ -1,0 +1,150 @@
+{
+  "nav": {
+    "whatIs": "Mitä masennus on?",
+    "signs": "Oireet",
+    "help": "Hae apua",
+    "contacts": "Yhteystiedot",
+    "a11y": "Saavutettavuus",
+    "ttsTitle": "Ääneen luku (Text-to-Speech)",
+    "ttsStart": "Aloita luku",
+    "ttsStop": "Lopeta luku",
+    "ttsHint": "Huomio: Ääneen luku toimii selaimessa (esim. Chrome/Edge) ilman asennusta."
+  },
+
+  "signs": {
+    "title": "Yleiset oireet",
+    "moodTitle": "Mieliala",
+    "moodText": "Masennuksesta kärsivät kokevat usein jatkuvaa alakuloa, jota ei voi vain ”ravistaa pois”. Toivottomuuden, sisäisen tyhjyyden tai arvottomuuden tunteet voivat kuormittaa arkea voimakkaasti. Myös ärtyneisyys tai epätavallisen matala rasituksensietokyky kuuluvat asiaan. Tämä mieliala kestää yleensä pidemmän aikaa.",
+    "energyTitle": "Kiinnostus & energia",
+    "energyText": "Monet kokevat kiinnostuksen menetystä asioihin, jotka aiemmin toivat iloa – kuten harrastukset, sosiaaliset kontaktit tai päivittäiset toiminnot. Samaan aikaan esiintyy usein voimakasta uupumusta. Jopa pienet tehtävät voivat tuntua ylivoimaisilta, ja arjen hallinta tai edes aloittaminen on vaikeaa.",
+    "sleepTitle": "Uni & keho",
+    "sleepText": "Masennus ilmenee usein myös fyysisesti. Näihin kuuluvat univaikeudet, kuten nukahtamis- tai unessapysymisvaikeudet, aikainen herääminen tai liiallinen unentarve. Lisäksi voi esiintyä ruokahalun muutoksia, keskittymisvaikeuksia tai fyysisiä vaivoja, joille ei ole selvää lääketieteellistä syytä."
+  },
+  
+  "imprint": {
+    "title": "Impressum",
+    "legal": "Tiedot Saksan TMG § 5 mukaan",
+    "project": "Herz&Seele – projektityö",
+    "contact": "Yhteys:",
+    "email": "Sähköposti:",
+    "note": "Huomio: Tämä on ei-kaupallinen opiskelijaprojekti. Sisältö on tarkoitettu vain tiedoksi, eikä se korvaa ammatillista lääketieteellistä tai psykologista neuvontaa."
+  },
+
+  "privacy": {
+    "title": "Tietosuojaseloste",
+    "overviewTitle": "Tietosuoja yhdellä silmäyksellä",
+    "overviewText": "Tämän verkkosivuston ylläpitäjä suhtautuu henkilötietojesi suojaan erittäin vakavasti. Käsittelemme henkilötietojasi luottamuksellisesti ja lakisääteisten tietosuojamääräysten mukaisesti.",
+    "noticeTitle": "Tärkeä huomautus:",
+    "noticeText": "Emme kerää terveystietoja emmekä vaadi rekisteröitymistä. Tämä verkkosivusto on tarkoitettu ainoastaan tiedon tarjoamiseen ja linkittämiseen ulkopuolisiin apupalveluihin.",
+    "controllerTitle": "Rekisterinpitäjä",
+    "dataCollectionTitle": "Tiedonkeruu verkkosivustollamme (palvelimen lokitiedostot)",
+    "dataCollectionText": "Kun vierailet tällä verkkosivustolla, selaimesi lähettää automaattisesti tietoja palvelimellemme, jotka tallennetaan lokitiedostoihin (esim. IP-osoite, kellonaika, vieraillut sivut). Nämä tiedot ovat teknisesti välttämättömiä sivuston vakauden ja turvallisuuden takaamiseksi. Näitä tietoja ei yhdistetä muihin henkilötietoihin.",
+    "sslTitle": "SSL- tai TLS-salaus",
+    "sslText": "Tämä sivusto käyttää turvallisuussyistä ja tiedonsiirron suojaamiseksi SSL- tai TLS-salausta. Tunnistat salatun yhteyden selaimen osoiterivin lukkokuvakkeesta.",
+    "disclaimerTitle": "Vastuuvapauslauseke",
+    "disclaimerText": "Annetut tiedot on tarkoitettu vain yleiseksi tiedoksi, eivätkä ne muodosta lääketieteellistä neuvontaa, diagnoosia tai terapiaa. Emme vastaa ulkopuolisista linkeistä. Niiden sisällöstä vastaavat kyseiset palveluntarjoajat.",
+    "rightsTitle": "Oikeutesi",
+    "rightsText": "Sinulla on oikeus saada tietoa tallennetuista henkilötiedoistasi sekä oikeus vaatia näiden tietojen korjaamista tai poistamista. Ota meihin yhteyttä ilmoitettuun osoitteeseen."
+  },
+
+  "copyright": {
+    "title": "Tekijänoikeudet ja käyttöehdot",
+    "s1Title": "1. Tekijänoikeus omaan sisältöön",
+    "s1Text1": "Sivuston ylläpitäjän luoma sisältö ja teokset (erityisesti tekstit, ulkoasu, grafiikat ja logot) ovat Saksan tekijänoikeuslain alaisia. Monistaminen, muokkaaminen, levittäminen ja kaikenlainen hyödyntäminen tekijänoikeuslain rajojen ulkopuolella vaatii tekijän kirjallisen suostumuksen.",
+    "s1Text2": "Lataukset ja kopiot tästä sivustosta on sallittu vain yksityiseen, ei-kaupalliseen käyttöön. Mikäli haluat käyttää sisältöä (esim. tekstejä vertaistukiryhmissä), ota meihin yhteyttä etukäteen.",
+    "s2Title": "2. Kolmansien osapuolten tekijänoikeudet",
+    "s2Text1": "Mikäli sisältö ei ole ylläpitäjän luomaa, huomioidaan kolmansien osapuolten tekijänoikeudet. Kolmansien osapuolten sisältö merkitään sellaiseksi (esim. lähdeviitteet).",
+    "s2Text2": "Jos huomaat tekijänoikeusloukkauksen, pyydämme ilmoittamaan siitä meille. Poistamme kyseisen sisällön välittömästi saatuamme tiedon rikkomuksesta.",
+    "s3Title": "3. Kuvalähteet",
+    "s3Text": "Tällä verkkosivustolla käytetyt kuvat ovat peräisin seuraavista lähteistä:",
+    "s3List": [
+      "Omat kuvat",
+      "Unsplash",
+      "Pixabay"
+    ],
+    "s3Note": "Yksittäisiin kuviin saattaa liittyä erillisiä lisenssiehtoja, joita on noudatettava.",
+    "s4Title": "4. Linkittäminen verkkosivustollemme",
+    "s4Text": "Olemme iloisia, jos linkität verkkosivustomme helpottaaksesi avun tarvitsijoiden tiedonsaantia. Sisällön upottaminen vieraisiin kehyksiin (framing) tai tekstien suora kopioiminen muille palvelimille ilman lähdemainintaa ei ole sallittua."
+  },
+
+  "findHelp": {
+    "title": "Etsi tukipisteitä",
+    "subtitle": "Hae postinumeron tai kaupungin (tai molempien) perusteella.",
+    "noteDE": "Huomio: Tukipisteet sijaitsevat Saksassa, ja ne näytetään siksi saksaksi.",
+    "plzPlaceholder": "Postinumero (esim. 10115)",
+    "cityPlaceholder": "Kaupunki (esim. Berliini)",
+    "search": "Hae",
+    "loading": "Haetaan...",
+    "noResults": "Ei tuloksia.",
+    "errorEmpty": "Anna postinumero tai kaupunki.",
+    "errorGeneric": "Virhe haussa",
+    "errorBackend": "Palvelimeen ei saada yhteyttä (onko palvelin käynnissä?)"
+  },
+
+  "hero": {
+    "titleMain": "Ymmärrä masennusta.",
+    "titleSoft": "Askel kerrallaan.",
+    "lead": "Et ole yksin. Täältä löydät ymmärrettävää tietoa, ensimmäisiä askelia ja luotettavia tukipisteitä. Pienet askeleet merkitsevät.",
+    "ctaHelp": "Etsi apua nyt",
+    "ctaMore": "Lue lisää",
+    "disclaimerLine1": "Huomio: Tämä sivu ei korvaa lääkärin tekemää diagnoosia. Tämä verkkosivusto ei voi tarjota välitöntä apua akuuteissa kriiseissä.",
+    "disclaimerLine2": "Jos olet hengenvaarallisessa tilanteessa, ota yhteyttä linkittämiimme hätäpalveluihin."
+  },
+
+  "help": {
+    "title": "Hae apua",
+    "steps": {
+      "talk": "Puhu asiasta: Luottamushenkilö, omalääkäri.",
+      "appointment": "Varaa aika: Pyydä psykoterapeuttista arviota.",
+      "selfcare": "Itsehoito: Päivärytmi, liikunta, unirytmi, pienet tavoitteet."
+    },
+    "medicalService": "116 117 – Päivystysapu (Saksa)",
+    "appointmentSearch": "Varaa aika verkossa",
+    "supportTitle": "Tuki",
+    "supportText": "Täältä löydät nopeaa tukea haastaviin hetkiin.",
+    "prevention": "Itsemurhien ehkäisy",
+    "loneliness": "Yksinäisyys",
+    "crisis": "Kriisi"
+  },
+
+  "whatIs": {
+    "title": "Mitä masennus on?",
+    "text": "Masennus on enemmän kuin vain ”surullisuutta”. Se vaikuttaa mielialaan, ajatuksiin, kehoon ja käyttäytymiseen pitkän ajan kuluessa ja voi kuormittaa arkea voimakkaasti. Monet kokevat itsensä rajoittuneiksi – tärkeää on tietää: masennus on yleistä ja hoidettavissa.",
+    "bullets": [
+      "Se voi kohdata ketä tahansa – iästä, ammatista tai elämäntilanteesta riippumatta.",
+      "Se syntyy biologisten, psykologisten ja sosiaalisten tekijöiden yhteisvaikutuksesta.",
+      "On olemassa tehokkaita hoitomuotoja ja monia tukimahdollisuuksia."
+    ],
+    "selfCheckTitle": "Ensimmäinen lyhyt itsearviointi",
+    "selfCheckText": "Itsearviointi ei korvaa diagnoosia – mutta se voi olla merkki hakea apua.",
+    "helloBetterText": "HelloBetter on digitaalinen alusta näyttöön perustuville verkko-ohjelmille, jotka hoitavat psyykkisiä vaivoja kuten stressiä, masennusta, ahdistusta ja unihäiriöitä. Ohjelmat opettavat kognitiivisen käyttäytymisterapian menetelmiä, ne ovat käytettävissä sovelluksella tai verkossa, ja niissä on psykologisten valmentajien tuki.",
+    "germanNote": "Huomio: Tällä sivustolla linkitetyt tukipisteet sijaitsevat Saksassa ja ovat siksi pääosin saksankielisiä."
+  },
+
+  "footer": {
+    "copyright": "Tietosivusto masennuksesta.",
+    "disclaimer": "Tämä sivu tarjoaa tietoa eikä korvaa ammatillista hoitoa.",
+    "impressum": "Impressum",
+    "privacy": "Tietosuoja",
+    "copyrightLink": "Tekijänoikeus"
+  },
+
+  "resources": {
+    "title": "Luotettavat yhteystahot",
+    "note": "Huom: Seuraavat palvelut ovat saksalaisia auttamispaikkoja. Siksi nimet ja sisällöt ovat saksaksi.",
+    "openWebsite": "Avaa verkkosivusto ↗",
+    "desc_depressionshilfe": "Tietoa, palveluita ja ohjeita kriisi- ja auttaviin puhelimiin.",
+    "desc_telefonseelsorge": "Ympäri vuorokauden, anonyymisti ja maksutta: 0800 111 0 111 / 0800 111 0 222",
+    "desc_116117": "Ajanvarauspalvelu ja päivystävä lääkäripalvelu.",
+    "desc_depressionsliga": "Nopeaa apua masennukseen ja kriisitilanteisiin.",
+    "desc_familienportal": "Kriisipuhelimia ja auttamispaikkoja vaikeissa tilanteissa.",
+    "desc_nummergegenkummer": "Apua lapsille, nuorille ja läheisille."
+  },
+
+  "lang": {
+    "label": "Kieli",
+    "de": "DE",
+    "en": "EN",
+    "fi": "FI"
+  }
+}

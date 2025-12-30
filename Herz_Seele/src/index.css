@@ -443,3 +443,33 @@ h3{ font-size: clamp(1.1rem, .8vw + 1rem, 1.3rem); }
 .a11y-action { width: 100%; }
 
 p { white-space: pre-line; }
+
+/* language popup */
+.header-right{ display:flex; align-items:center; gap:10px; }
+
+.lang{ position:relative; }
+.lang-menu{
+  position:absolute; right:0; top: calc(100% + 8px);
+  background: linear-gradient(180deg, rgba(10,16,28,.9), rgba(10,16,28,.75));
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 14px;
+  padding: 8px;
+  min-width: 120px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(10px);
+  z-index: 80;
+}
+.lang-item{
+  width:100%;
+  text-align:left;
+  background: transparent;
+  border: 0;
+  color: var(--text);
+  padding: 10px 10px;
+  border-radius: 10px;
+  cursor:pointer;
+}
+.lang-item:hover{
+  background: rgba(255,255,255,.06);
+}
+
