@@ -5,6 +5,7 @@ export default function Help() {
 
   return (
     <section id="hilfe" className="container grid-2">
+      {/* Linke Seite */}
       <article className="card help-card">
         <div>
           <h2>{t("help.title")}</h2>
@@ -37,6 +38,7 @@ export default function Help() {
         </div>
       </article>
 
+      {/* Rechte Seite */}
       <aside className="card soothing help-card">
         <div>
           <h2>{t("help.supportTitle")}</h2>
@@ -44,13 +46,33 @@ export default function Help() {
         </div>
 
         <div className="cta-stack">
-          <a href="#" className="btn btn-primary">
+          {/* Suizidprävention */}
+          <a
+            href="https://www.suizidprophylaxe.de"
+            className="btn btn-primary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("help.prevention")}
           </a>
-          <a href="#" className="btn btn-outline">
+
+          {/* Einsamkeit */}
+          <a
+            href="https://kompetenznetz-einsamkeit.de"
+            className="btn btn-outline"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("help.loneliness")}
           </a>
-          <a href="#" className="btn btn-secondary">
+
+          {/* Krise */}
+          <a
+            href="https://www.telefonseelsorge.de/sorgen-themen/krise/"
+            className="btn btn-secondary"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             {t("help.crisis")}
           </a>
         </div>
