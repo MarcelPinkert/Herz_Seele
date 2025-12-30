@@ -1,22 +1,32 @@
+import { useTranslation } from "react-i18next";
+
 export default function Hero() {
+  const { t } = useTranslation();
+
   return (
     <section className="hero container card">
       <div className="hero-content">
-        <h1>Depression verstehen. <span className="soft">Schritt für Schritt.</span></h1>
+        <h1>
+          {t("hero.titleMain")} <span className="soft">{t("hero.titleSoft")}</span>
+        </h1>
 
         <p className="lead">
-          Du bist nicht allein. Hier findest du verständliche Informationen, erste Schritte und seriöse
-          Anlaufstellen. Kleine Schritte zählen.
+          {t("hero.lead")}
         </p>
 
         <div className="actions">
-          <a href="#hilfe" className="btn btn-primary">Jetzt Unterstützung finden</a>
-          <a href="#was-ist" className="btn btn-ghost">Mehr erfahren</a>
+          <a href="#hilfe" className="btn btn-primary">
+            {t("hero.ctaHelp")}
+          </a>
+          <a href="#was-ist" className="btn btn-ghost">
+            {t("hero.ctaMore")}
+          </a>
         </div>
 
         <p className="disclaimer">
-          Hinweis: Diese Seite ersetzt keine ärztliche Diagnose. Diese Webseite kann keine Soforthilfe in akuten Krisen leisten.<br />
-          Wenn Sie sich in einer lebensbedrohlichen Situation befinden, wenden Sie sich an die von uns verlinkten Seiten.
+          {t("hero.disclaimerLine1")}
+          <br />
+          {t("hero.disclaimerLine2")}
         </p>
       </div>
 

@@ -1,40 +1,28 @@
 import helloBetterLogo from "../assets/hellobetter.svg";
+import { useTranslation } from "react-i18next";
 
 export default function WhatIs() {
+  const { t } = useTranslation();
+
+  const bullets = t("whatIs.bullets", { returnObjects: true });
+
   return (
     <section id="was-ist" className="container grid-2">
       <article className="card">
-        <h2>Was ist eine Depression?</h2>
-        <p>
-          Eine Depression ist mehr als „traurig sein“. Sie betrifft Stimmung,
-          Gedanken, Körper und Verhalten über einen längeren Zeitraum und kann
-          den Alltag stark belasten. Viele Betroffene fühlen sich dadurch
-          eingeschränkt – wichtig ist: Eine Depression ist häufig und sie ist
-          behandelbar.
-        </p>
+        <h2>{t("whatIs.title")}</h2>
+
+        <p>{t("whatIs.text")}</p>
+
         <ul className="list">
-          <li>
-            Sie kann jede*n treffen – unabhängig von Alter, Beruf oder
-            Lebenssituation.
-          </li>
-          <li>
-            Sie entsteht durch ein Zusammenspiel biologischer, psychologischer
-            und sozialer Faktoren.
-          </li>
-          <li>
-            Es gibt wirksame Behandlungen und vielfältige Möglichkeiten zur
-            Unterstützung.
-          </li>
+          {Array.isArray(bullets) &&
+            bullets.map((item, idx) => <li key={idx}>{item}</li>)}
         </ul>
       </article>
 
       <aside className="card tip">
-        <h3>Erster kurzer Selbst-Check</h3>
+        <h3>{t("whatIs.selfCheckTitle")}</h3>
 
-        <p className="small">
-          Ein Selbst-Check ersetzt keine Diagnose – kann aber ein Hinweis sein,
-          Hilfe zu suchen.
-        </p>
+        <p className="small">{t("whatIs.selfCheckText")}</p>
 
         <a
           href="https://hellobetter.de/rezept/service/"
@@ -53,17 +41,15 @@ export default function WhatIs() {
             alt="HelloBetter Logo"
             style={{ height: "18px" }}
           />
-          
+          <span>HelloBetter</span>
         </a>
 
-        <p className="small" style={{ marginTop: "12px", opacity: 10.8 }}>
-          <strong>HelloBetter ist eine digitale Plattform für
-          evidenzbasierte Online-Therapieprogramme, die psychische Beschwerden
-          wie Stress, Depression, Angst und Schlafstörungen behandelt. Die
-          Programme vermitteln wirksame Techniken aus der kognitiven
-          Verhaltenstherapie, sind über App und Web nutzbar, werden durch
-          psychologische Coaches begleitet und sind teilweise als digitale
-          Gesundheitsanwendung (DiGA) auf Rezept erhältlich.</strong>
+        <p className="small" style={{ marginTop: "12px", opacity: 0.9 }}>
+          <strong>{t("whatIs.helloBetterText")}</strong>
+        </p>
+
+        <p className="small" style={{ marginTop: "12px", opacity: 0.85 }}>
+          {t("whatIs.germanNote")}
         </p>
       </aside>
     </section>

@@ -1,63 +1,38 @@
+import { useTranslation } from "react-i18next";
+
 export default function Urheberrecht_Nutzungsbedingungen() {
-  
+  const { t } = useTranslation();
+
+  const list = t("copyright.s3List", { returnObjects: true });
+
   return (
     <section className="container card" style={{ margin: "24px auto" }}>
-      <h1>Urheberrecht und Nutzungsbedingungen</h1>
-      <br />
-      <h3>1. Urheberrecht an eigenen Inhalten</h3>
-      <p>
-        Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen
-        Seiten (insbesondere Texte, Layout, Grafiken und Logos) unterliegen dem
-        deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung
-        und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes
-        bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw.
-        Erstellers.
-      </p>
+      <h1>{t("copyright.title")}</h1>
 
-      <p>
-        Downloads und Kopien dieser Seite sind nur für den privaten, nicht
-        kommerziellen Gebrauch gestattet. Sofern Sie Inhalte (z. B.
-        Informationstexte zur Weitergabe in Selbsthilfegruppen) nutzen möchten,
-        setzen Sie sich bitte vorab mit uns in Verbindung.
-      </p>
+      <h3>{t("copyright.s1Title")}</h3>
+      <p>{t("copyright.s1Text1")}</p>
+      <p>{t("copyright.s1Text2")}</p>
 
-      <h3>2. Urheberrecht Dritter</h3>
-      <p>
-        Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden,
-        werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte
-        Dritter als solche gekennzeichnet (z. B. durch Quellenangaben oder
-        Bildnachweise).
-      </p>
+      <h3>{t("copyright.s2Title")}</h3>
+      <p>{t("copyright.s2Text1")}</p>
+      <p>{t("copyright.s2Text2")}</p>
 
-      <p>
-        Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden,
-        bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von
-        Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
-      </p>
-
-      <h3>3. Bildnachweis</h3>
-      <p>
-        Die auf dieser Website verwendeten Bilder stammen aus folgenden Quellen:
-      </p>
+      <h3>{t("copyright.s3Title")}</h3>
+      <p>{t("copyright.s3Text")}</p>
 
       <ul className="list">
-        <strong><li>Eigene Aufnahmen</li>
-        <li>Unsplash</li>
-        <li>Pixabay</li></strong>
+        {Array.isArray(list) &&
+          list.map((item, i) => (
+            <li key={i}>
+              <strong>{item}</strong>
+            </li>
+          ))}
       </ul>
 
-      <p className="small">
-        Ggf. gelten für einzelne Bilder gesonderte Lizenzbedingungen, die
-        jeweils beachtet werden.
-      </p>
+      <p className="small">{t("copyright.s3Note")}</p>
 
-      <h3>4. Setzen von Links auf unsere Website</h3>
-      <p>
-        Wir freuen uns, wenn Sie unsere Website verlinken, um Betroffenen den
-        Zugang zu Informationen zu erleichtern. Das Einbetten unserer Inhalte
-        in fremde Frames (sog. Framing) oder das direkte Kopieren unserer Texte
-        auf andere Server ohne Quellenangabe ist jedoch nicht gestattet.
-      </p>
+      <h3>{t("copyright.s4Title")}</h3>
+      <p>{t("copyright.s4Text")}</p>
     </section>
   );
 }

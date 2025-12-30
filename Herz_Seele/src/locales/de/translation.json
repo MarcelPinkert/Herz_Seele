@@ -1,0 +1,151 @@
+{
+  "nav": {
+    "whatIs": "Was ist Depression?",
+    "signs": "Anzeichen",
+    "help": "Hilfe finden",
+    "contacts": "Kontakte",
+    "a11y": "Barrierefreiheit",
+    "ttsTitle": "Vorlesen (Text-to-Speech)",
+    "ttsStart": "Vorlesen starten",
+    "ttsStop": "Vorlesen stoppen",
+    "ttsHint": "Hinweis: Vorlesen funktioniert im Browser (z. B. Chrome/Edge) ohne Installation."
+  },
+  
+  "signs": {
+    "title": "Häufige Anzeichen",
+    "moodTitle": "Stimmung",
+    "moodText": "Menschen mit Depressionen erleben häufig eine anhaltende Niedergeschlagenheit, die sich nicht einfach „abschütteln“ lässt. Gefühle von Hoffnungslosigkeit, innerer Leere oder Wertlosigkeit können den Alltag stark belasten. Auch Reizbarkeit oder eine ungewöhnlich geringe Belastbarkeit gehören dazu. Diese Stimmung hält meist über einen längeren Zeitraum an.",
+    "energyTitle": "Interesse & Energie",
+    "energyText": "Viele Betroffene verlieren das Interesse an Dingen, die früher Freude bereitet haben – etwa Hobbys, soziale Kontakte oder alltägliche Aktivitäten. Gleichzeitig tritt oft eine starke Erschöpfung auf. Selbst kleine Aufgaben können überwältigend wirken, und es fällt schwer, den Alltag zu bewältigen oder überhauptanzufangen.",
+    "sleepTitle": "Schlaf & Körper",
+    "sleepText": "Depressionen zeigen sich häufig auch körperlich. Dazu zählen Schlafprobleme wie Ein- oder Durchschlafstörungen, frühes Erwachen oder übermäßiges Schlafbedürfnis. Zusätzlich können Appetitveränderungen, Konzentrationsprobleme oder körperliche Beschwerden auftreten, für die es keine klare medizinische Ursachegibt."
+  },
+
+  "imprint": {
+    "title": "Impressum",
+    "legal": "Angaben gemäß § 5 TMG",
+    "project": "Herz&Seele – Projektarbeit",
+    "contact": "Kontakt:",
+    "email": "E-Mail:",
+    "note": "Hinweis: Dies ist ein nicht-kommerzielles Studienprojekt. Die bereitgestellten Inhalte dienen ausschließlich Informationszwecken und ersetzen keine professionelle medizinische oder psychologische Beratung."
+  },
+
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "overviewTitle": "Datenschutz auf einen Blick",
+    "overviewText": "Der Betreiber dieser Website nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften.",
+    "noticeTitle": "Wichtiger Hinweis:",
+    "noticeText": "Wir erheben keine Gesundheitsdaten und verlangen keine Registrierung. Diese Website dient ausschließlich der Bereitstellung von Informationen und Verlinkungen zu externen Hilfsangeboten.",
+    "controllerTitle": "Verantwortlicher",
+    "dataCollectionTitle": "Datenerfassung auf unserer Website (Server-Log-Dateien)",
+    "dataCollectionText": "Beim Aufrufen dieser Website werden automatisch Informationen an den Server unserer Website gesendet und in Server-Logfiles gespeichert, z. B. IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seiten und Referrer-URL. Diese Daten sind technisch notwendig, um die Website stabil und sicher bereitzustellen. Eine Zusammenführung mit anderen personenbezogenen Daten findet nicht statt.",
+    "sslTitle": "SSL- bzw. TLS-Verschlüsselung",
+    "sslText": "Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie am Schloss-Symbol in der Adresszeile Ihres Browsers.",
+    "disclaimerTitle": "Haftungsausschluss",
+    "disclaimerText": "Die bereitgestellten Informationen dienen ausschließlich der allgemeinen Information und stellen keine medizinische Beratung, Diagnose oder Therapie dar. Für externe Links übernehmen wir keine Haftung. Für deren Inhalte sind die jeweiligen Anbieter verantwortlich.",
+    "rightsTitle": "Ihre Rechte",
+    "rightsText": "Sie haben das Recht auf Auskunft über Ihre gespeicherten personenbezogenen Daten sowie auf Berichtigung oder Löschung dieser Daten. Kontaktieren Sie uns hierzu bitte unter der angegebenen Adresse."
+  },
+
+  "copyright": {
+    "title": "Urheberrecht und Nutzungsbedingungen",
+    "s1Title": "1. Urheberrecht an eigenen Inhalten",
+    "s1Text1": "Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten (insbesondere Texte, Layout, Grafiken und Logos) unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.",
+    "s1Text2": "Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. Sofern Sie Inhalte (z. B. Informationstexte zur Weitergabe in Selbsthilfegruppen) nutzen möchten, setzen Sie sich bitte vorab mit uns in Verbindung.",
+    "s2Title": "2. Urheberrecht Dritter",
+    "s2Text1": "Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet (z. B. durch Quellenangaben oder Bildnachweise).",
+    "s2Text2": "Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.",
+    "s3Title": "3. Bildnachweis",
+    "s3Text": "Die auf dieser Website verwendeten Bilder stammen aus folgenden Quellen:",
+    "s3List": [
+      "Eigene Aufnahmen",
+      "Unsplash",
+      "Pixabay"
+    ],
+    "s3Note": "Ggf. gelten für einzelne Bilder gesonderte Lizenzbedingungen, die jeweils beachtet werden.",
+    "s4Title": "4. Setzen von Links auf unsere Website",
+    "s4Text": "Wir freuen uns, wenn Sie unsere Website verlinken, um Betroffenen den Zugang zu Informationen zu erleichtern. Das Einbetten unserer Inhalte in fremde Frames (sog. Framing) oder das direkte Kopieren unserer Texte auf andere Server ohne Quellenangabe ist jedoch nicht gestattet."
+  },
+
+  "findHelp": {
+    "title": "Anlaufstellen finden",
+    "subtitle": "Suche nach PLZ oder Stadt (oder beidem).",
+    "noteDE": "Hinweis: Die Anlaufstellen beziehen sich auf Deutschland und werden daher auf Deutsch angezeigt.",
+    "plzPlaceholder": "PLZ (z.B. 10115)",
+    "cityPlaceholder": "Stadt (z.B. Berlin)",
+    "search": "Suchen",
+    "loading": "Suche...",
+    "noResults": "Keine Treffer gefunden.",
+    "errorEmpty": "Bitte PLZ oder Stadt eingeben.",
+    "errorGeneric": "Fehler bei der Suche",
+    "errorBackend": "Backend nicht erreichbar (läuft der Server?)"
+  },
+
+  "hero": {
+    "titleMain": "Depression verstehen.",
+    "titleSoft": "Schritt für Schritt.",
+    "lead": "Du bist nicht allein. Hier findest du verständliche Informationen, erste Schritte und seriöse Anlaufstellen. Kleine Schritte zählen.",
+    "ctaHelp": "Jetzt Unterstützung finden",
+    "ctaMore": "Mehr erfahren",
+    "disclaimerLine1": "Hinweis: Diese Seite ersetzt keine ärztliche Diagnose. Diese Webseite kann keine Soforthilfe in akuten Krisen leisten.",
+    "disclaimerLine2": "Wenn Sie sich in einer lebensbedrohlichen Situation befinden, wenden Sie sich an die von uns verlinkten Seiten."
+  },
+
+  "help": {
+    "title": "Hilfe finden",
+    "steps": {
+      "talk": "Darüber sprechen: Vertrauensperson, Hausarzt/Hausärztin.",
+      "appointment": "Termin vereinbaren: Psychotherapeutische Sprechstunde anfragen.",
+      "selfcare": "Selbstfürsorge: Tagesstruktur, Bewegung, Schlafrhythmus, kleine Ziele."
+    },
+    "medicalService": "116 117 – Ärztlicher Bereitschaftsdienst",
+    "appointmentSearch": "Online Terminsuche",
+    "supportTitle": "Hilfestellung",
+    "supportText": "Hier findest du schnelle Unterstützung in herausfordernden Momenten.",
+    "prevention": "Suizidprävention",
+    "loneliness": "Einsamkeit",
+    "crisis": "Krise"
+  },
+
+  "whatIs": {
+    "title": "Was ist eine Depression?",
+    "text": "Eine Depression ist mehr als „traurig sein“. Sie betrifft Stimmung, Gedanken, Körper und Verhalten über einen längeren Zeitraum und kann den Alltag stark belasten. Viele Betroffene fühlen sich dadurch eingeschränkt – wichtig ist: Eine Depression ist häufig und sie ist behandelbar.",
+    "bullets": [
+      "Sie kann jede*n treffen – unabhängig von Alter, Beruf oder Lebenssituation.",
+      "Sie entsteht durch ein Zusammenspiel biologischer, psychologischer und sozialer Faktoren.",
+      "Es gibt wirksame Behandlungen und vielfältige Möglichkeiten zur Unterstützung."
+    ],
+    "selfCheckTitle": "Erster kurzer Selbst-Check",
+    "selfCheckText": "Ein Selbst-Check ersetzt keine Diagnose – kann aber ein Hinweis sein, Hilfe zu suchen.",
+    "helloBetterText": "HelloBetter ist eine digitale Plattform für evidenzbasierte Online-Therapieprogramme, die psychische Beschwerden wie Stress, Depression, Angst und Schlafstörungen behandelt. Die Programme vermitteln wirksame Techniken aus der kognitiven Verhaltenstherapie, sind über App und Web nutzbar, werden durch psychologische Coaches begleitet und sind teilweise als digitale Gesundheitsanwendung (DiGA) auf Rezept erhältlich.",
+    "germanNote": "Hinweis: Die verlinkten Anlaufstellen auf dieser Website beziehen sich auf Deutschland und sind daher überwiegend auf Deutsch."
+  },
+
+  "footer": {
+    "copyright": "Informationsseite rund um Depressionen.",
+    "disclaimer": "Diese Seite bietet Informationen und ersetzt keine professionelle Behandlung.",
+    "impressum": "Impressum",
+    "privacy": "Datenschutz",
+    "copyrightLink": "Urheberrecht"
+  },
+
+  "resources": {
+    "title": "Seriöse Kontakte",
+    "note": "Hinweis: Die folgenden Angebote sind deutsche Anlaufstellen, daher sind Namen und Inhalte in deutscher Sprache.",
+    "open": "Website öffnen ↗",
+    "desc": {
+      "ddh": "Wissen, Angebote, Telefonseelsorge-Hinweise.",
+      "ts": "Rund um die Uhr, anonym und kostenlos: 0800 111 0 111 / 0800 111 0 222",
+      "kvs": "Terminservicestellen & ärztlicher Bereitschaftsdienst.",
+      "liga": "Schnelle Hilfe bei Depressionen und in Krisenmomenten",
+      "familie": "Krisentelefone & Anlaufstellen in schwierigen Situationen",
+      "kummer": "Hilfe für Kinder, Jugendliche und Angehörige"
+    }
+  },
+
+  "lang": {
+    "label": "Sprache",
+    "de": "DE",
+    "en": "EN"
+  }
+}

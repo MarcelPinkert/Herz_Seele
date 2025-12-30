@@ -1,8 +1,10 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 export default function Header() {
   const location = useLocation();
+  const { t, i18n } = useTranslation();
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [ttsOn, setTtsOn] = useState(false);
@@ -12,13 +14,15 @@ export default function Header() {
   useEffect(() => {
     function onDocClick(e) {
       if (!menuRef.current) return;
-      if (!menuRef.current.contains(e.target)) setMenuOpen(false);
+      if (!menuRef.current.contains(e.target)) {
+        setMenuOpen(false);
+      }
     }
     document.addEventListener("mousedown", onDocClick);
     return () => document.removeEventListener("mousedown", onDocClick);
   }, []);
 
-  // Wenn Seite wechselt: Popup zu + Vorlesen stoppen
+  // Bei Seitenwechsel: Popup schließen & Vorlesen stoppen
   useEffect(() => {
     setMenuOpen(false);
     window.speechSynthesis?.cancel();
@@ -26,18 +30,17 @@ export default function Header() {
   }, [location.pathname]);
 
   function startReading() {
-    // Aktuellen Seiten-Text vorlesen (main)
     const main = document.getElementById("main");
     const text = (main?.innerText || "").trim();
-
     if (!text) return;
 
-    // alles abbrechen was noch läuft
     window.speechSynthesis.cancel();
 
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = "de-DE";
-    utter.rate = 1; // normal
+
+    // Sprache automatisch anhand der UI-Sprache
+    utter.lang = i18n.language === "en" ? "en-US" : "de-DE";
+    utter.rate = 1;
     utter.pitch = 1;
 
     utter.onend = () => setTtsOn(false);
@@ -52,51 +55,75 @@ export default function Header() {
     setTtsOn(false);
   }
 
+  function toggleLanguage() {
+    const next = i18n.language === "de" ? "en" : "de";
+    i18n.changeLanguage(next);
+    stopReading(); // wichtig: sonst Mischsprache
+  }
+
   return (
     <header className="site-header glass">
       <div className="container header-inner">
-        {/* Klickbares Logo -> Startseite */}
+        {/* Logo → Startseite */}
         <Link to="/" className="brand" aria-label="Zur Startseite">
           <span className="logo" aria-hidden="true">🌿</span>
           <span className="brand-name">Herz&Seele</span>
         </Link>
 
         <div className="header-right">
+          {/* Navigation */}
           <nav className="nav" aria-label="Hauptnavigation">
-            <a href="#was-ist" className="nav-link">Was ist Depression?</a>
-            <a href="#zeichen" className="nav-link">Anzeichen</a>
-            <a href="#hilfe" className="nav-link">Hilfe finden</a>
-            <a href="#ressourcen" className="nav-link">Kontakte</a>
+            <a href="#was-ist" className="nav-link">{t("nav.whatIs")}</a>
+            <a href="#zeichen" className="nav-link">{t("nav.signs")}</a>
+            <a href="#hilfe" className="nav-link">{t("nav.help")}</a>
+            <a href="#ressourcen" className="nav-link">{t("nav.contacts")}</a>
           </nav>
 
-          {/* Barrierefreiheit Button + Popup */}
+          {/* Sprachumschalter */}
+          <button
+            type="button"
+            className="nav-link lang-btn"
+            onClick={toggleLanguage}
+            aria-label={t("lang.label")}
+            title={t("lang.label")}
+          >
+            {i18n.language === "de" ? t("lang.en") : t("lang.de")}
+          </button>
+
+          {/* Barrierefreiheit / TTS */}
           <div className="accessibility" ref={menuRef}>
             <button
               type="button"
               className="nav-link a11y-btn"
               aria-haspopup="menu"
               aria-expanded={menuOpen}
-              onClick={() => setMenuOpen((v) => !v)}
+              onClick={() => setMenuOpen(v => !v)}
             >
-              🔊 Barrierefreiheit
+              🔊 {t("nav.a11y")}
             </button>
 
             {menuOpen && (
-              <div className="a11y-menu" role="menu" aria-label="Barrierefreiheit Menü">
-                <p className="a11y-title">Vorlesen (Text-to-Speech)</p>
+              <div className="a11y-menu" role="menu" aria-label={t("nav.a11y")}>
+                <p className="a11y-title">{t("nav.ttsTitle")}</p>
 
                 {!ttsOn ? (
-                  <button className="btn btn-primary a11y-action" onClick={startReading}>
-                    ▶ Vorlesen starten
+                  <button
+                    className="btn btn-primary a11y-action"
+                    onClick={startReading}
+                  >
+                    ▶ {t("nav.ttsStart")}
                   </button>
                 ) : (
-                  <button className="btn btn-outline a11y-action" onClick={stopReading}>
-                    ■ Vorlesen stoppen
+                  <button
+                    className="btn btn-outline a11y-action"
+                    onClick={stopReading}
+                  >
+                    ■ {t("nav.ttsStop")}
                   </button>
                 )}
 
                 <p className="small" style={{ marginTop: 10, opacity: 0.9 }}>
-                  Hinweis: Vorlesen funktioniert im Browser (z. B. Chrome/Edge) ohne Installation.
+                  {t("nav.ttsHint")}
                 </p>
               </div>
             )}

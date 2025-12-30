@@ -1,0 +1,149 @@
+{
+    "nav": {
+        "whatIs": "What is Depression?",
+        "signs": "Signs",
+        "help": "Find Help",
+        "contacts": "Contacts",
+        "a11y": "Accessibility",
+        "ttsTitle": "Read Aloud (Text-to-Speech)",
+        "ttsStart": "Start Reading Aloud",
+        "ttsStop": "Stop Reading Aloud",
+        "ttsHint": "Note: Reading aloud works in the browser (e.g., Chrome/Edge) without installation."
+    },
+
+    "imprint": {
+        "title": "Legal Notice",
+        "legal": "Information according to § 5 German Telemdia Act (TMG)",
+        "project": "Herz&Seele – Student project",
+        "contact": "Contact:",
+        "email": "E-Mail:",
+        "note": "Note: This is a non-commercial student project. The provided content is for informational purposes only and does not replace professional medical or psychological advice."
+    },
+
+    "signs": {
+        "title": "Common signs",
+        "moodTitle": "Mood",
+        "moodText": "People with depression often experience persistent low mood that cannot simply be “shaken off.” Feelings of hopelessness, inner emptiness, or worthlessness may strongly affect everyday life. Irritability and reduced resilience can also occur. This mood typically lasts for a longer period of time.",
+        "energyTitle": "Interest & energy",
+        "energyText": "Many people lose interest in things they used to enjoy-such as hobbies, social contact, or everyday activities. At the same time, strong exhaustion is common. Even small tasks can feel overwhelming, and starting or managing daily routines may become difficult.",
+        "sleepTitle": "Sleep & body",
+        "sleepText": "Depression can also show up physically. This includes sleep problems such as difficulty falling asleep, staying asleep, waking up early, or sleeping too much. Appetite changes, concentration difficulties, or physical complaints without a clear medical cause may also occur."
+    },
+
+    "privacy": {
+        "title": "Privacy Policy",
+        "overviewTitle": "Data protection at a glance",
+        "overviewText": "The operator of this website takes the protection of your personal data very seriously. Your personal data is treated confidentially and in accordance with applicable data protection laws.",
+        "noticeTitle": "Important notice:",
+        "noticeText": "We do not collect health data and do not require registration. This website is solely intended to provide information and links to external support services.",
+        "controllerTitle": "Accountable party",
+        "dataCollectionTitle": "Data collection on our website (server log files)",
+        "dataCollectionText": "When accessing this website, information is automatically transmitted to our server and stored in server log files, such as IP address, date and time of access, accessed pages, and referrer URL. This data is technically necessary to ensure the stability and security of the website.",
+        "sslTitle": "SSL or TLS encryption",
+        "sslText": "This site uses SSL or TLS encryption for security reasons and to protect data transmission. You can recognize an encrypted connection by the lock symbol in your browser’s address bar.",
+        "disclaimerTitle": "Disclaimer",
+        "disclaimerText": "The information provided on this website is for general informational purposes only and does not constitute medical advice, diagnosis, or treatment. We assume no liability for external links; their content is the responsibility of the respective providers.",
+        "rightsTitle": "Your rights",
+        "rightsText": "You have the right to obtain information about your stored personal data and the right to request correction or deletion. Please contact us using the address provided above."
+    },
+
+    "copyright": {
+        "title": "Copyright and Terms of Use",
+        "s1Title": "1. Copyright for our own content",
+        "s1Text1": "Content and works created by the site operator (especially texts, layout, graphics, and logos) are subject to German copyright law. Any duplication, editing, distribution, or use beyond the limits of copyright law requires prior written permission from the respective author/creator.",
+        "s1Text2": "Downloads and copies of this website are permitted for private, non-commercial use only. If you would like to use content (e.g., informational texts for self-help groups), please contact us in advance.",
+        "s2Title": "2. Copyright of third parties",
+        "s2Text1": "If content on this website was not created by the operator, third-party copyrights are respected. In particular, third-party content is marked as such (e.g., via source references or image credits).",
+        "s2Text2": "If you nevertheless notice a copyright infringement, please inform us. Upon becoming aware of violations, we will remove such content immediately.",
+        "s3Title": "3. Image credits",
+        "s3Text": "Images used on this website come from the following sources:",
+        "s3List": [
+            "Own images",
+            "Unsplash",
+            "Pixabay"
+        ],
+        "s3Note": "Some images may be subject to additional license terms which must be observed.",
+        "s4Title": "4. Linking to our website",
+        "s4Text": "We appreciate links to our website to help people access information. However, embedding our content in frames (so-called framing) or copying our texts to other servers without attribution is not permitted."
+    },
+
+    "findHelp": {
+        "title": "Find support services",
+        "subtitle": "Search by postal code or city (or both).",
+        "noteDE": "Note: These services are located in Germany and are therefore shown in German.",
+        "plzPlaceholder": "Postal code (e.g., 10115)",
+        "cityPlaceholder": "City (e.g., Berlin)",
+        "search": "Search",
+        "loading": "Searching...",
+        "noResults": "No results found.",
+        "errorEmpty": "Please enter a postal code or city.",
+        "errorGeneric": "Search error",
+        "errorBackend": "Backend not reachable (is the server running?)"
+    },
+
+    "hero": {
+        "titleMain": "Understanding depression.",
+        "titleSoft": "Step by step.",
+        "lead": "You are not alone. Here you’ll find clear information, first steps, and trusted places to get help. Small steps matter.",
+        "ctaHelp": "Find support now",
+        "ctaMore": "Learn more",
+        "disclaimerLine1": "Note: This site does not replace medical diagnosis. It cannot provide immediate emergency help in acute crises.",
+        "disclaimerLine2": "If you are in a life-threatening situation, please use the services linked on this website."
+    },
+
+    "help": {
+        "title": "Finding help",
+        "steps": {
+            "talk": "Talk about it: a trusted person or your family doctor.",
+            "appointment": "Make an appointment: request a psychotherapy consultation.",
+            "selfcare": "Self-care: daily structure, movement, sleep routine, small goals."
+        },
+        "medicalService": "116 117 – Medical on-call service",
+        "appointmentSearch": "Online appointment search",
+        "supportTitle": "Support",
+        "supportText": "Here you can find quick help in difficult moments.",
+        "prevention": "Suicide prevention",
+        "loneliness": "Loneliness",
+        "crisis": "Crisis"
+    },
+
+    "whatIs": {
+        "title": "What is depression?",
+        "text": "Depression is more than “feeling sad.” It can affect mood, thoughts, the body, and behavior over a longer period of time and can significantly impact everyday life. Many people feel restricted by it-important to know: depression is common and treatable.",
+        "bullets": [
+            "It can affect anyone-regardless of age, job, or life situation.",
+            "It results from a combination of biological, psychological, and social factors.",
+            "There are effective treatments and many ways to get support."
+        ],
+        "selfCheckTitle": "A quick self-check",
+        "selfCheckText": "A self-check does not replace a diagnosis—but it can be a sign that seeking help might be useful.",
+        "helloBetterText": "HelloBetter is a digital platform offering evidence-based online therapy programs for mental health concerns such as stress, depression, anxiety, and sleep problems. The programs teach proven CBT techniques, work via app and web, include support from psychological coaches, and some are available in Germany as a digital health application (DiGA) by prescription.",
+        "germanNote": "Note: The listed support services on this website are for Germany and are therefore mostly provided in German."
+    },
+
+    "footer": {
+        "copyright": "Information platform about depression.",
+        "disclaimer": "This website provides information and does not replace professional treatment.",
+        "impressum": "Legal notice",
+        "privacy": "Privacy policy",
+        "copyrightLink": "Copyright"
+    },
+
+    "resources": {
+        "title": "Trusted contacts",
+        "note": "All listed organizations are based in Germany. Names and services are provided in German.",
+        "openWebsite": "Open website ↗",
+        "desc_depressionshilfe": "Information, support offers and crisis hotline references.",
+        "desc_telefonseelsorge": "Available 24/7, anonymous and free of charge.",
+        "desc_116117": "Medical on-call service and appointment service centers.",
+        "desc_depressionsliga": "Fast help for depression and crisis situations.",
+        "desc_familienportal": "Crisis hotlines and support services for families.",
+        "desc_nummergegenkummer": "Support for children, adolescents and relatives."
+    },
+
+
+    "lang": {
+        "de": "DE",
+        "en": "EN"
+    }
+}

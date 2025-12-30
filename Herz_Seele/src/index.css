@@ -414,3 +414,32 @@ h3{ font-size: clamp(1.1rem, .8vw + 1rem, 1.3rem); }
 .a11y-btn{
   box-shadow: 0 0 0 1px rgba(120,255,214,.25);
 }
+
+/* new header-right */
+
+.header-right { display: flex; align-items: center; gap: 10px; }
+
+.a11y-btn, .lang-btn {
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.12);
+  color: var(--text);
+}
+
+.a11y-menu{
+  position:absolute;
+  right:0;
+  margin-top:10px;
+  width:min(320px, 88vw);
+  padding:14px;
+  border-radius: 16px;
+  background: linear-gradient(180deg, rgba(10,16,28,.92), rbga(10,16,28,.75));
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: var(--shadow);
+  z-index:100;
+}
+
+.accessibility {position: relative; }
+.a11y-title { margin: 0 0 10px; font-weight: 700; }
+.a11y-action { width: 100%; }
+
+p { white-space: pre-line; }

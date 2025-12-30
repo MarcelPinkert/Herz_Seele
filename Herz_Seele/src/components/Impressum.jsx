@@ -1,12 +1,16 @@
+import { useTranslation } from "react-i18next";
+
 export default function Impressum() {
+  const { t } = useTranslation();
+
   return (
     <section className="container card" style={{ margin: "40px auto" }}>
-      <h1>Impressum</h1>
+      <h1>{t("imprint.title")}</h1>
 
-      <p><strong>Angaben gemäß § 5 TMG</strong></p>
+      <p><strong>{t("imprint.legal")}</strong></p>
 
       <p>
-        Herz&Seele – Projektarbeit<br />
+        <strong>{t("imprint.project")}</strong><br />
         Marcel Pinkert<br />
         Theodor von Brentano
       </p>
@@ -18,14 +22,12 @@ export default function Impressum() {
       </p>
 
       <p>
-        <strong>Kontakt:</strong><br />
-        E-Mail: kontakt@herzundseele-projekt.de
+        <strong>{t("imprint.contact")}</strong><br />
+        {t("imprint.email")} kontakt@herzundseele-projekt.de
       </p>
 
       <p className="small" style={{ marginTop: "20px" }}>
-        Hinweis: Dies ist ein nicht-kommerzielles Studienprojekt.
-        Die bereitgestellten Inhalte dienen ausschließlich Informationszwecken
-        und ersetzen keine professionelle medizinische oder psychologische Beratung.
+        {t("imprint.note")}
       </p>
 
     </section>
