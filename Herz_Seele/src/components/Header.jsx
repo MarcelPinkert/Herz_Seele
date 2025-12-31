@@ -34,6 +34,7 @@ export default function Header() {
   function currentTtsLang() {
     if (i18n.language === "en") return "en-US";
     if (i18n.language === "fi") return "fi-FI";
+    if (i18n.language === "tr") return "tr-TR";
     return "de-DE";
   }
 
@@ -45,7 +46,7 @@ export default function Header() {
     window.speechSynthesis.cancel();
 
     const utter = new SpeechSynthesisUtterance(text);
-    utter.lang = currentTtsLang();
+    utter.lang = currentTtsLang(); // Sprache abhängig von i18n und eher was dein Betriebssystem für eine Sprache hat
     utter.rate = 1;
     utter.pitch = 1;
 
@@ -63,7 +64,7 @@ export default function Header() {
 
   function setLanguage(next) {
     i18n.changeLanguage(next);
-    stopReading(); // koordiniert vorlesen
+    stopReading();       // wichtig: sonst liest es gemischt weiter
     setLangOpen(false);
   }
 
@@ -72,20 +73,20 @@ export default function Header() {
   return (
     <header className="site-header glass">
       <div className="container header-inner">
-        <Link to="/" className="brand" aria-label="Zur Startseite">
+        <Link to="/" className="brand" aria-label={t("nav.homeAria") || "Zur Startseite"}>
           <span className="logo" aria-hidden="true">🌿</span>
           <span className="brand-name">Herz&Seele</span>
         </Link>
 
         <div className="header-right">
-          <nav className="nav" aria-label="Hauptnavigation">
+          <nav className="nav" aria-label={t("nav.aria") || "Hauptnavigation"}>
             <a href="#was-ist" className="nav-link">{t("nav.whatIs")}</a>
             <a href="#zeichen" className="nav-link">{t("nav.signs")}</a>
             <a href="#hilfe" className="nav-link">{t("nav.help")}</a>
             <a href="#ressourcen" className="nav-link">{t("nav.contacts")}</a>
           </nav>
 
-          {/* lang menu */}
+          {/* Sprachmenü */}
           <div className="lang" ref={langRef}>
             <button
               type="button"
@@ -103,6 +104,7 @@ export default function Header() {
                 <button className="lang-item" onClick={() => setLanguage("de")}>DE</button>
                 <button className="lang-item" onClick={() => setLanguage("en")}>EN</button>
                 <button className="lang-item" onClick={() => setLanguage("fi")}>FI</button>
+                <button className="lang-item" onClick={() => setLanguage("tr")}>TR</button>
               </div>
             )}
           </div>
@@ -139,6 +141,7 @@ export default function Header() {
               </div>
             )}
           </div>
+
         </div>
       </div>
     </header>
