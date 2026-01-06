@@ -1,8 +1,10 @@
 #cloud-config
 package_update: true
+package_upgrade: true
+
 packages:
   - docker.io
-  - docker-compose
+  - docker-compose-plugin
   - git
 
 runcmd:
@@ -11,6 +13,7 @@ runcmd:
   - systemctl start docker
 
   # Repo klonen
+  - rm -rf /opt/app
   - git clone https://github.com/Theodor-v-B/Herz_Seele.git /opt/app
 
   # .env anlegen
@@ -20,12 +23,12 @@ runcmd:
     POSTGRES_PASSWORD=password123
     POSTGRES_DB=anlaufstellen
 
-    PGHOST=localhost
+    PGHOST=postgres
     PGUSER=admin
     PGPASSWORD=password123
     PGDATABASE=anlaufstellen
     PGPORT=5432
     EOF
 
-  # Container starten
-  - cd /opt/app && docker-compose up -d --build
+  # Container starten (Compose v2)
+  - cd /opt/app && docker compose up -d --build
