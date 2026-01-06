@@ -4,13 +4,28 @@ package_upgrade: true
 
 packages:
   - docker.io
-  - docker-compose-plugin
   - git
+  - curl
 
 runcmd:
   # Docker starten
   - systemctl enable docker
   - systemctl start docker
+
+  # FALSCHE / ALTE Compose-Plugins entfernen (wichtig!)
+  - rm -f /usr/local/lib/docker/cli-plugins/docker-compose
+  - rm -f /usr/libexec/docker/cli-plugins/docker-compose
+  - rm -f /root/.docker/cli-plugins/docker-compose
+  - rm -f /home/azureuser/.docker/cli-plugins/docker-compose
+
+  # Docker Compose v2 OFFIZIELL installieren (systemweit)
+  - mkdir -p /usr/local/lib/docker/cli-plugins
+  - curl -SL https://github.com/docker/compose/releases/latest/download/docker-compose-linux-x86_64 \
+      -o /usr/local/lib/docker/cli-plugins/docker-compose
+  - chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
+
+  # Version prüfen (Debug – erscheint in cloud-init logs)
+  - docker compose version
 
   # Repo klonen
   - rm -rf /opt/app
@@ -23,6 +38,7 @@ runcmd:
     POSTGRES_PASSWORD=password123
     POSTGRES_DB=anlaufstellen
 
+    # WICHTIG: Service-Name, nicht localhost
     PGHOST=postgres
     PGUSER=admin
     PGPASSWORD=password123
@@ -30,5 +46,5 @@ runcmd:
     PGPORT=5432
     EOF
 
-  # Container starten (Compose v2)
+  # Container starten (ECHTES Compose v2)
   - cd /opt/app && docker compose up -d --build
