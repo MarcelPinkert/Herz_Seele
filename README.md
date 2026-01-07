@@ -68,13 +68,12 @@ Wenn du Docker nicht verwenden möchtest, kannst du eine lokale Datenbank (z.B. 
 ## Häufige Probleme und Lösungen
 
 - **Die Website startet nicht:** Stelle sicher, dass Docker läuft und die `.env`-Datei korrekt erstellt wurde.
-- **Fehlermeldung mit "Postgres":** Das bedeutet, die Datenbank läuft nicht. Prüfe mit `docker-compose logs postgres`, ob alles in Ordnung ist.
-- **Andere Fehler:** Schau in die Logs mit `docker-compose logs`. Wenn du nicht weiterkommst, suche online nach der Fehlermeldung oder frage in einem Forum.
+- **Fehlermeldung mit "Postgres":** Das bedeutet, die Datenbank läuft nicht. Prüfe mit `docker compose logs postgres`, ob alles in Ordnung ist.
+- **Andere Fehler:** Schau in die Logs mit `docker compose logs`. Wenn du nicht weiterkommst, suche online nach der Fehlermeldung oder frage in einem Forum.
 
 ## Mehr Informationen
 
 - Die Website unterstützt mehrere Sprachen: Deutsch, Englisch, Arabisch, Finnisch, Polnisch, Russisch, Türkisch und Ukrainisch.
-- Es gibt auch ältere Versionen der Website in den Ordnern `altes_frontend_1` und `Altes_Frontend`, falls du sie ausprobieren möchtest.
 
 Wenn du Fragen hast oder helfen möchtest, das Projekt zu verbessern, melde dich gerne!
 
