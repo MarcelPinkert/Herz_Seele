@@ -435,10 +435,10 @@ input.btn {
 }
 
 /* Inputs “wie Buttons” */
-.input-plz {
+.input.btn.input-plz {
   background: rgba(51, 253, 192, 0.68);
   border: 1px solid rgba(120, 255, 214, 0.65);
-  color: var(--accent);
+  color: var(--text);
 }
 
 /* =========================================================
