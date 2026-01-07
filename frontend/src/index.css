@@ -366,6 +366,7 @@ a { color: inherit; text-decoration: none; }
   border-color: rgba(90, 169, 255, 0.55);
 }
 
+/* HelloBetter button*/
 .btn-secondary {
   background: linear-gradient(180deg, rgba(120, 255, 214, 0.95), rgba(120, 255, 214, 0.65));
   border-color: rgba(96, 254, 207, 0.55);
@@ -430,15 +431,38 @@ a { color: inherit; text-decoration: none; }
 
 /* ====== Input Felder ====== */
 input.btn {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(50, 255, 194, 0.62);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* Inputs “wie Buttons” */
-.input-plz {
-  background: rgba(90, 169, 255, 0.18);
-  border: 1px solid rgba(90, 169, 255, 0.45);
+.btn.input-stadt {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
 }
+
+/* Inputs “wie Buttons” */
+.btn.input-plz {
+  background: rgba(50, 255, 194, 0.62);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: #fff;
+}
+
+/* Make placeholder text visible (force white) */
+.btn.input-plz::placeholder,
+.btn.input-stadt::placeholder {
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 1; /* some browsers apply opacity */
+}
+
+.btn.input-plz::-webkit-input-placeholder,
+.btn.input-stadt::-webkit-input-placeholder { color: rgba(255,255,255,0.95); }
+.btn.input-plz::-moz-placeholder,
+.btn.input-stadt::-moz-placeholder { color: rgba(255,255,255,0.95); opacity: 1; }
+.btn.input-plz:-ms-input-placeholder,
+.btn.input-stadt:-ms-input-placeholder { color: rgba(255,255,255,0.95); }
+.btn.input-plz::-ms-input-placeholder,
+.btn.input-stadt::-ms-input-placeholder { color: rgba(255,255,255,0.95); }
 
 /* =========================================================
    TYPOGRAPHY

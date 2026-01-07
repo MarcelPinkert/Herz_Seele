@@ -1,0 +1,57 @@
+name: "Deploy to Azure VM (Docker Compose)"
+
+on:
+  push:
+    branches: ["main"]
+
+concurrency:
+  group: deploy-main
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: "Debug: check secret presence"
+        env:
+          VM_IP: ${{ secrets.VM_IP }}
+          VM_USERNAME: ${{ secrets.VM_USERNAME }}
+          VM_SSH_KEY: ${{ secrets.VM_SSH_KEY }}
+        run: |
+          if [ -z "$VM_IP" ]; then
+            echo "VM_IP is MISSING/EMPTY"
+            exit 1
+          else
+            echo "VM_IP is present"
+          fi
+
+          if [ -z "$VM_USERNAME" ]; then
+            echo "VM_USERNAME is MISSING/EMPTY"
+            exit 1
+          else
+            echo "VM_USERNAME is present"
+          fi
+
+          if [ -z "$VM_SSH_KEY" ]; then
+            echo "VM_SSH_KEY is MISSING/EMPTY"
+            exit 1
+          else
+            echo "VM_SSH_KEY is present"
+          fi
+
+      - name: "Deploy via SSH"
+        uses: appleboy/ssh-action@v1.2.4
+        with:
+          host: ${{ secrets.VM_IP }}
+          username: ${{ secrets.VM_USERNAME }}
+          key: ${{ secrets.VM_SSH_KEY }}
+          script: |
+            set -euo pipefail
+            cd /opt/app
+
+            git fetch --all --prune
+            git reset --hard origin/main
+
+            docker compose up -d --build
+            docker compose ps
+ 
