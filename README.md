@@ -1,105 +1,82 @@
-# Hilfe bei Depressionen — Projektübersicht
+# Herz & Seele - Hilfe bei Depressionen
 
-**Kurzbeschreibung**
-Dieses Repository enthält ein kleines Web-Projekt zur Information über Depressionen und zur einfachen Suche lokaler Hilfsangebote. Es besteht aus einem Backend (Node + Postgres) und mehreren Frontend-Varianten (React/Vite sowie ältere statische Versionen).
+Willkommen bei "Herz & Seele"! Dieses Projekt ist eine einfache Website, die Menschen hilft, mehr über Depressionen zu erfahren und lokale Hilfsangebote in ihrer Nähe zu finden. Die Website ist in mehreren Sprachen verfügbar und soll Unterstützung bieten, wenn man sich niedergeschlagen fühlt.
 
----
+## Was ist dieses Projekt?
 
-## Projektstruktur 📁
-- `backend/`
-  - `server.js` — Express-API, DB-Initialisierung & Endpunkte (`/api/health`, `/api/anlaufstellen`)
-  - `db.js` — PostgreSQL-Pool-Konfiguration
-  - `seed.sql` — Seed-Daten für Tabelle `anlaufstellen`
-  - `.env` — lokale Umgebungsvariablen (nicht committed)
-  - `package.json`
-- `Herz_Seele/` — modernes Frontend (Vite + React)
-  - `src/` — Komponenten, Styles; `package.json` mit `dev`, `build` und `lint` scripts
-- `altes_frontend_1/` und `Altes_Frontend/` — ältere, statische Seiten (`index.html`, `style.css`)
-- `docker-compose.yml` — Container-Setup (Postgres service)
+"Herz & Seele" besteht aus zwei Hauptteilen:
+- **Die Website (Frontend):** Das ist der Teil, den du im Browser siehst. Hier findest du Informationen über Depressionen, Tipps und eine Suchfunktion für Hilfsstellen.
+- **Der Server (Backend):** Das ist der "Motor" hinter der Website. Er speichert Daten über Hilfsangebote und stellt sie der Website zur Verfügung.
 
----
+Das Projekt läuft in sogenannten "Containern" (kleine, isolierte Umgebungen), um es einfach zu starten und zu verwalten.
 
-## Voraussetzungen
-- Node.js (-> LTS empfohlen)
-- npm oder pnpm
-- Docker & Docker Compose (für lokale DB-Instanz)
+## Für wen ist diese Website gedacht?
 
----
+Die Website richtet sich an alle, die Informationen über Depressionen suchen oder Hilfe brauchen. Sie ist besonders nützlich für:
+- Menschen, die Anzeichen von Depressionen bei sich oder anderen bemerken.
+- Familienmitglieder oder Freunde, die unterstützen möchten.
+- Jeder, der mehr über psychische Gesundheit erfahren möchte.
 
-## Quickstart — lokal (ohne Docker)
-### 1) Backend (API)
+**Wichtig:** Diese Website ersetzt keine professionelle medizinische Beratung. Bei akuten Problemen wende dich bitte an Fachpersonal oder Notdienste.
 
-```bash
-cd backend
-npm install
-# sicherstellen: Postgres ist erreichbar und Umgebungsvariablen sind gesetzt (z.B. in backend/.env)
-node server.js
-```
+## Wie starte ich die Website?
 
-API-Endpoints:
-- `GET /api/health` — Health-Check
-- `GET /api/anlaufstellen?plz=...&stadt=...` — Suche nach PLZ oder Stadt
+Um die Website lokal auf deinem Computer zu starten, folge diesen einfachen Schritten. Du brauchst keine Programmierkenntnisse – alles ist automatisiert.
 
-Wichtig: Das Backend versucht beim ersten Start `seed.sql` auszuführen, wenn die Tabelle leer ist.
+### Was brauchst du?
+- **Docker:** Ein Programm, das "Container" (wie kleine virtuelle Maschinen) auf deinem Computer laufen lässt. Es ist kostenlos und einfach zu installieren. Besuche [docker.com](https://www.docker.com/) und lade die Desktop-Version für Windows herunter.
+- **Node.js:** Eine Software, die für die Website benötigt wird. Lade sie von [nodejs.org](https://nodejs.org/) herunter (empfohlen: die LTS-Version).
 
-### 2) Frontend (Vite)
+### Schritt-für-Schritt-Anleitung
+1. **Lade das Projekt herunter:** Stelle sicher, dass du alle Dateien aus diesem Ordner hast.
 
-```bash
-cd Herz_Seele
-npm install
-npm run dev
-# öffne im Browser die angezeigte Vite-URL (meist http://localhost:5173)
-```
+2. **Erstelle eine Konfigurationsdatei:** Erstelle eine neue Datei namens `.env` im Hauptordner (neben der `README.md`). Kopiere diese Zeilen hinein:
+   ```
+   POSTGRES_USER=postgres
+   POSTGRES_PASSWORD=postgres
+   POSTGRES_DB=anlaufstellen
+   ```
+   Diese Datei enthält Passwörter für die Datenbank – behandle sie sicher und teile sie nicht.
 
-### 3) Statische Frontends
-Für `altes_frontend_1/` bzw. `Altes_Frontend/` reicht, die `index.html` im Browser zu öffnen oder einen lokalen Server zu starten (`npx serve .` oder `python -m http.server`).
+3. **Starte die Anwendung:** Öffne ein Terminal (z.B. die Eingabeaufforderung oder PowerShell) im Hauptordner und gib ein:
+   ```
+   docker-compose up -d
+   ```
+   Das startet die Datenbank und den Server im Hintergrund.
 
----
+4. **Starte die Website:** Gehe in den Ordner `backend` und gib ein:
+   ```
+   cd backend
+   npm install
+   node server.js
+   ```
+   Das startet den Server.
 
-## Quickstart — mit Docker (empfohlen für neue Setups)
-1. Erstelle eine `.env` im Projekt-Root mit mindestens diesen Werten:
+5. **Öffne die Website:** Gehe in den Ordner `Herz_Seele` und gib ein:
+   ```
+   cd Herz_Seele
+   npm install
+   npm run dev
+   ```
+   Öffne deinen Browser und gehe zu der Adresse, die angezeigt wird (meist `http://localhost:5173`).
 
-```env
-POSTGRES_USER=postgres
-POSTGRES_PASSWORD=postgres
-POSTGRES_DB=anlaufstellen
-```
+Fertig! Die Website sollte nun in deinem Browser laufen.
 
-2. Starte Compose:
+### Alternative: Ohne Docker (für Fortgeschrittene)
+Wenn du Docker nicht verwenden möchtest, kannst du eine lokale Datenbank (z.B. PostgreSQL) installieren. Das ist aber komplizierter und wird hier nicht im Detail erklärt.
 
-```bash
-docker-compose up -d
-```
+## Häufige Probleme und Lösungen
 
-3. Prüfe Logs (falls Probleme):
+- **Die Website startet nicht:** Stelle sicher, dass Docker läuft und die `.env`-Datei korrekt erstellt wurde.
+- **Fehlermeldung mit "Postgres":** Das bedeutet, die Datenbank läuft nicht. Prüfe mit `docker compose logs postgres`, ob alles in Ordnung ist.
+- **Andere Fehler:** Schau in die Logs mit `docker compose logs`. Wenn du nicht weiterkommst, suche online nach der Fehlermeldung oder frage in einem Forum.
 
-```bash
-docker-compose logs postgres --tail=200
-```
+## Mehr Informationen
 
-4. Sobald die DB läuft: `cd backend && node server.js` starten.
+- Die Website unterstützt mehrere Sprachen: Deutsch, Englisch, Arabisch, Finnisch, Polnisch, Russisch, Türkisch und Ukrainisch.
+
+Wenn du Fragen hast oder helfen möchtest, das Projekt zu verbessern, melde dich gerne!
 
 ---
 
-## Wichtige Umgebungsvariablen
-- `POSTGRES_USER`, `POSTGRES_PASSWORD`, `POSTGRES_DB` — für den Postgres-Container
-- In `backend/.env` (oder System-Env): `PGHOST`, `PGPORT`, `PGUSER`, `PGPASSWORD`, `PGDATABASE`
-
----
-
-## Häufige Probleme & Troubleshooting ⚠️
-- ECONNREFUSED: Postgres nicht erreichbar (Container nicht gestartet oder falscher Host/Port).
-- Init- oder Auth-Fehler: `password authentication failed for user "..."` → Prüfe `POSTGRES_*` und `PG*` Variablen.
-- Docker-Init bricht ab: `POSTGRES_PASSWORD` fehlt → in `.env` setzen oder `POSTGRES_HOST_AUTH_METHOD=trust` (nicht empfohlen).
-- SQL-Fehler beim Seed: Prüfe `backend/seed.sql` auf fehlende Kommata/abschließende Klammern.
-
----
-
-## Linting & Tests
-- Frontend (`Herz_Seele`) hat ESLint-Script: `npm run lint`.
-- Es empfiehlt sich, CI für Linting, Accessibility-Checks und ggf. Unit-/Integrationstests einzurichten.
-
----
-## In Arbeit
-- Azure Grundsetup (Bicep)
-- Mehrsprachigkeit
+*Dieses Projekt ist ein Lernprojekt und wird kontinuierlich verbessert.*
