@@ -448,6 +448,22 @@ input.btn {
   color: #fff;
 }
 
+/* Make placeholder text visible (force white) */
+.btn.input-plz::placeholder,
+.btn.input-stadt::placeholder {
+  color: rgba(255, 255, 255, 0.95);
+  opacity: 1; /* some browsers apply opacity */
+}
+
+.btn.input-plz::-webkit-input-placeholder,
+.btn.input-stadt::-webkit-input-placeholder { color: rgba(255,255,255,0.95); }
+.btn.input-plz::-moz-placeholder,
+.btn.input-stadt::-moz-placeholder { color: rgba(255,255,255,0.95); opacity: 1; }
+.btn.input-plz:-ms-input-placeholder,
+.btn.input-stadt:-ms-input-placeholder { color: rgba(255,255,255,0.95); }
+.btn.input-plz::-ms-input-placeholder,
+.btn.input-stadt::-ms-input-placeholder { color: rgba(255,255,255,0.95); }
+
 /* =========================================================
    TYPOGRAPHY
 ========================================================= */
