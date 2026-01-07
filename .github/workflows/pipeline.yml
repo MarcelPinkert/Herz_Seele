@@ -13,7 +13,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "Debug: check secret presence"
-        shell: bash
         env:
           VM_IP: ${{ secrets.VM_IP }}
           VM_USERNAME: ${{ secrets.VM_USERNAME }}
@@ -51,6 +50,5 @@ jobs:
             cd /opt/app
             git fetch --all --prune
             git reset --hard origin/main
-            docker compose down
             docker compose up -d --build
             docker compose ps
