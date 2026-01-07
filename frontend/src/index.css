@@ -434,6 +434,12 @@ input.btn {
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
+input.btn.input-stadt {
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--text);
+}
+
 /* Inputs “wie Buttons” */
 .input.btn.input-plz {
   background: rgba(255, 255, 255, 0.3);
