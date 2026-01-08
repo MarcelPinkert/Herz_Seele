@@ -54,6 +54,6 @@ jobs:
             git fetch --all --prune
             git reset --hard origin/main
 
-            docker compose up -d --build
-            docker compose ps
+            sudo docker compose up -d --build
+            sudo docker compose ps
  
