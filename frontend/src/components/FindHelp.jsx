@@ -24,10 +24,10 @@ export default function FindHelp() {
   // -----------------------------
   // Config
   // -----------------------------
-  const API_BASE = useMemo(
-    () => import.meta.env.VITE_API_BASE_URL || "http://localhost:3000",
-    []
-  );
+  //const API_BASE = useMemo(
+   // () => import.meta.env.VITE_API_BASE_URL || "http://localhost:3000",
+   // []
+   // );
 
   // -----------------------------
   // Helpers
@@ -68,7 +68,7 @@ export default function FindHelp() {
 
     try {
       // Request
-      const res = await fetch(`${API_BASE}/api/anlaufstellen?${qs}`);
+      const res = await fetch(`/api/anlaufstellen?${qs}`);
       const data = await res.json();
 
       if (!res.ok) {

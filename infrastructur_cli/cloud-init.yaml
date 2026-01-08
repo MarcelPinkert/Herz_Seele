@@ -34,7 +34,7 @@ runcmd:
     PGUSER=postgres
     PGPASSWORD=password123
     PGDATABASE=anlaufstellen
-    PGPORT=5432
+    PGPORT=http://backend:3000
     EOF
 
   # Container starten

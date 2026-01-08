@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(
   cors({
-    origin: ["http://localhost:5173"],
+//    origin: "*",
   })
 );
 
@@ -88,7 +88,7 @@ app.get("/api/anlaufstellen", async (req, res) => {
 
 initDb()
   .then(() => {
-    app.listen(PORT, () => {
+    app.listen(PORT,"0.0.0.0", () => {
       console.log(`Server läuft auf http://localhost:${PORT}`);
       console.log(`Health: http://localhost:${PORT}/api/health`);
     });

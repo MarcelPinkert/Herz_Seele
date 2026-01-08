@@ -24,7 +24,7 @@ services:
       DB_PASSWORD: ${POSTGRES_PASSWORD}
       DB_NAME: ${POSTGRES_DB}
     ports:
-      - "8000:8000"
+      - "3000:3000"
     depends_on:
       postgres:
         condition: service_healthy
