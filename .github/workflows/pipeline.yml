@@ -47,6 +47,7 @@ jobs:
           key: ${{ secrets.VM_SSH_KEY }}
           script: |
             set -euo pipefail
+            sudo chown -R azureuser:azureuser /opt/app
             git config --global --add safe.directory /opt/app
             cd /opt/app
 
