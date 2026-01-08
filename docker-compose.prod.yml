@@ -17,7 +17,7 @@ services:
       retries: 5
 
   backend:
-    image: theorickshaw/herz_seele_backend:latest
+    image: theorickshaw/herz-seele-backend:latest
     container_name: anlaufstellen-backend
     environment:
       DB_HOST: postgres
@@ -31,12 +31,12 @@ services:
         condition: service_healthy
 
   frontend:
-    image: theorickshaw/herz_seele_frontend:latest
+    image: theorickshaw/herz-seele-frontend:latest
     container_name: anlaufstellen-frontend
     ports:
       - "80:80"
     depends_on:
       - backend
-      
+
 volumes:
   pgdata:
