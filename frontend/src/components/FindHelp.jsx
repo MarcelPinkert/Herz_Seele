@@ -68,7 +68,7 @@ export default function FindHelp() {
 
     try {
       // Request
-      const res = await fetch(`${API_BASE}/api/anlaufstellen?${qs}`);
+      const res = await fetch(`/api/anlaufstellen?${qs}`);
       const data = await res.json();
 
       if (!res.ok) {

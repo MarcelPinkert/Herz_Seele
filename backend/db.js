@@ -5,7 +5,7 @@ const pool = new Pool({
     user: process.env.PGUSER || "postgres",
     password: process.env.PGPASSWORD || "password123",
     database: process.env.PGDATABASE || "anlaufstellen",
-    post: Number(process.env.PGPORT || 5432),
+    port: Number(process.env.PGPORT || 5432),
 });
 
 module.exports = {
