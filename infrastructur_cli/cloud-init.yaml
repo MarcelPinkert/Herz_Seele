@@ -9,6 +9,7 @@ packages:
   - curl
   - gnupg
   - lsb-release
+  - certbot
 
 runcmd:
   # Docker GPG Key und Repo
@@ -40,6 +41,7 @@ runcmd:
   # Container starten
   - cd /opt/app && docker compose up -d --build
 
+  # Erzeuge das Zertifikat im /cert/www-Ordner
   - |
     DOMAIN="schrittnachvorn.de"
     certbot certonly --webroot \
@@ -51,5 +53,6 @@ runcmd:
       --non-interactive || true
 
   # Frontend/NGINX neu starten, damit er die Zertifikate laden kann
+  # Er mountet den Ordner /cert/www in den Container
   - cd /opt/app && docker compose restart frontend || true
   
