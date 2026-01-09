@@ -45,7 +45,7 @@ runcmd:
   - |
     DOMAIN="schrittnachvorn.de"
     certbot certonly --webroot \
-      -w /opt/app/cert/www \
+      -w /opt/app/certbot/www \
       -d "$DOMAIN" \
       -d "www.$DOMAIN" \
       --agree-tos \
