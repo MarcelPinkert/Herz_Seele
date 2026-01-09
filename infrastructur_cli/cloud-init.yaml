@@ -39,3 +39,17 @@ runcmd:
 
   # Container starten
   - cd /opt/app && docker compose up -d --build
+
+  - |
+    DOMAIN="schrittnachvorn.de"
+    certbot certonly --webroot \
+      -w /opt/app/cert/www \
+      -d "$DOMAIN" \
+      -d "www.$DOMAIN" \
+      --agree-tos \
+      -m "admin@$DOMAIN" \
+      --non-interactive || true
+
+  # Frontend/NGINX neu starten, damit er die Zertifikate laden kann
+  - cd /opt/app && docker compose restart frontend || true
+  
