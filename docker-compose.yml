@@ -33,6 +33,10 @@ services:
     container_name: anlaufstellen-frontend
     ports:
       - "80:80"
+      - "443:443"
+    volumes:
+      - ./certbot/www:/var/www/certbot:ro
+      - /etc/letsencrypt:/etc/letsencrypt:ro
     depends_on:
       - backend
 
